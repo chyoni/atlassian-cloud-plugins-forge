@@ -1,0 +1,72 @@
+{
+  "app": {
+    "title": "Question generator app - i18n for UI Kit",
+    "description": "A question generator app built using UI Kit to demonstrate i18n support in Forge [en-US]"
+  },
+  "ui": {
+    "header": "Question Generator",
+    "button": {
+      "nextQuestion": "Next Question"
+    },
+    "text": {
+      "intro": "You can use the following question to build your next ice-breaker activity.",
+      "currentLocale": "Your locale: "
+    }
+  },
+  "question": {
+    "q_0": "What's the best thing you've crossed off your bucket list? [en-US]",
+    "q_1": "If you could only read one book for the rest of your life, what would it be? [en-US]",
+    "q_2": "What's your favorite children's book? [en-US]",
+    "q_3": "What's your go-to coffee order? [en-US]",
+    "q_4": "What's your favorite board game? [en-US]",
+    "q_5": "What's an underrated kitchen appliance or gadget? [en-US]",
+    "q_6": "What was your first job? [en-US]",
+    "q_7": "What's your favorite room in your house? [en-US]",
+    "q_8": "What's the best vacation you've ever been on? [en-US]",
+    "q_9": "What's your least favorite sport? [en-US]",
+    "q_10": "What's your dream car? [en-US]",
+    "q_11": "What toppings are on your ideal pizza? [en-US]",
+    "q_12": "What song makes you feel the most nostalgic? [en-US]",
+    "q_13": "What's your go-to karaoke song? [en-US]",
+    "q_14": "What song is most likely to get you on the dance floor? [en-US]",
+    "q_15": "What format was the first album you purchased? (Cassette, CD, digital) [en-US]",
+    "q_16": "What smell reminds you most of a specific place or time? [en-US]",
+    "q_17": "Do you have a lucky number? What is it, and why? [en-US]",
+    "q_18": "What's your favorite type of cuisine? [en-US]",
+    "q_19": "What's your favorite way to eat potatoes? [en-US]",
+    "q_20": "If you could have an unlimited supply of one thing, what would it be? [en-US]",
+    "q_21": "What's your signature dance move? [en-US]",
+    "q_22": "What would your personal theme song or walk-on song be? [en-US]",
+    "q_23": "What's your favorite dad joke? [en-US]",
+    "q_24": "What's your best childhood memory? [en-US]",
+    "q_25": "Who would your 12-year-old self say is their biggest hero? [en-US]",
+    "q_26": "What's an unexpected life lesson you've learned? [en-US]",
+    "q_27": "After people and pets, what's the first thing you'd rescue if (god forbid!) your home was on fire? [en-US]",
+    "q_28": "What's your proudest accomplishment? [en-US]",
+    "q_29": "What's your most irrational fear? [en-US]",
+    "q_30": "If you had to live in a different country for a year, which one would you choose? [en-US]",
+    "q_31": "What's your hottest take or most surprising opinion? [en-US]",
+    "q_32": "Would you want to know how much time you have left to live? [en-US]",
+    "q_33": "What's a surprising “fun fact” about you? [en-US]",
+    "q_34": "If you had to teach a class or give a TED Talk, what would it be about? [en-US]",
+    "q_35": "What one day in your life would you most like to relive? [en-US]",
+    "q_36": "What's a cause or charity that means a lot to you? [en-US]",
+    "q_37": "What's your favorite way to spend a day off? [en-US]",
+    "q_38": "How would your loved ones describe you in five words? [en-US]",
+    "q_39": "What's your most treasured possession? [en-US]",
+    "q_40": "When was the last time you felt inspired to create something? [en-US]",
+    "q_41": "What's one of your nicknames and how did you get it? [en-US]",
+    "q_42": "What's the best compliment you've ever received? [en-US]",
+    "q_43": "What character traits do you admire? [en-US]",
+    "q_44": "What trait are you most proud of in yourself? [en-US]",
+    "q_45": "If you could master any skill immediately, what would it be? [en-US]",
+    "q_46": "What would you title your memoir? [en-US]",
+    "q_47": "What's a habit you're trying to break or build? [en-US]",
+    "q_48": "Would you rather travel to the past or the future? [en-US]",
+    "q_49": "What's the biggest misconception people have about you? [en-US]",
+    "q_50": "What's your favorite family tradition? [en-US]",
+    "q_51": "If you could switch lives with someone for a day, who would you choose? [en-US]",
+    "q_52": "What's one thing you've always wanted to try but haven't yet? [en-US]",
+    "q_53": "What advice would you give to your younger self? [en-US]"
+  }
+}

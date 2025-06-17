@@ -1,0 +1,28 @@
+modules:
+  jira:adminPage:
+    - key: admin-page-tutorial-hello-world-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      title: 게시판
+      pages:
+        - title: 게시판 목록
+          route: '/boards'
+        - title: 글쓰기
+          route: '/boards/new'
+
+  
+  function:
+    - key: resolver
+      handler: index.handler
+
+resources:
+  - key: main
+    path: static/hello-world/build
+
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/3741eedd-ec22-476a-aa0d-ce03441596e0

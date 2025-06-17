@@ -1,0 +1,26 @@
+modules:
+  jira:issueContext:
+    - key: jira-quotes-hello-world-issue-context
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Jira Quotes
+      description: A hello world issue context.
+      label: Hello World!
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/9c310b6d-0911-4a89-97e5-46a5c4a32708
+permissions:
+  scopes: []
+  external:
+    fetch:
+      backend:
+        - zenquotes.io

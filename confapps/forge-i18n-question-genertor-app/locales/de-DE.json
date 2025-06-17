@@ -1,0 +1,53 @@
+{
+  "app": {
+    "title": "Quizfragen-generator - i18n für UI Kit",
+    "description": "Eine demo-anwendung, die quizfragen anzeigt. Die Forge-Anwendung wurde mit UI Kit erstellt, um die i18n-Unterstützung in Forge zu demonstrieren [de-DE]"
+  },
+  "ui": {
+    "header": "Fragen-Generator",
+    "button": {
+      "nextQuestion": "Nächste Frage"
+    },
+    "text": {
+      "intro": "Du kannst diese Frage bei deiner nächsten Aufwärm-Runde stellen",
+      "currentLocale": "Deine Sprache: "
+    }
+  },
+  "question": {
+    "q_0": "Was ist das Beste, das du von deiner Wunschliste erledigt hast? [de-DE]",
+    "q_1": "Wenn du für den Rest deines Lebens nur ein Buch lesen könntest, welches wäre es? [de-DE]",
+    "q_7": "Was ist dein Lieblingsraum in deinem Haus? [de-DE]",
+    "q_8": "Was war dein bester Urlaub? [de-DE]",
+    "q_9": "Was ist dein unbeliebtester Sport? [de-DE]",
+    "q_10": "Was ist dein Traumauto? [de-DE]",
+    "q_11": "Welche Beläge sind auf deiner idealen Pizza? [de-DE]",
+    "q_12": "Welches Lied macht dich am meisten nostalgisch? [de-DE]",
+    "q_13": "Was ist dein Standard-Lied für Karaoke? [de-DE]",
+    "q_14": "Welches Lied bringt dich am ehesten auf die Tanzfläche? [de-DE]",
+    "q_15": "Welches Format hatte das erste Album, das du gekauft hast? (Kassette, CD, digital) [de-DE]",
+    "q_16": "Welcher Geruch erinnert dich am meisten an einen bestimmten Ort oder eine bestimmte Zeit? [de-DE]",
+    "q_17": "Hast du eine Glückszahl? Was ist sie und warum? [de-DE]",
+    "q_18": "Was ist dein Lieblingsessen? [de-DE]",
+    "q_19": "Auf welche Art isst du Kartoffeln am liebsten? [de-DE]",
+    "q_20": "Wenn du einen endlosen Vorrat von einer Sache haben könntest, welche wäre es? [de-DE]",
+    "q_21": "Was ist dein persönlicher Dance Move? [de-DE]",
+    "q_22": "Mit welcher Musik würdest du gerne in der Öffentlichkeit auftreten? [de-DE]",
+    "q_23": "Was ist dein Lieblings-Flachwitz? [de-DE]",
+    "q_24": "Was ist deine beste Kindheitserinnerung? [de-DE]",
+    "q_25": "Wer wäre der größte Held, als du 12 Jahre alt warst? [de-DE]",
+    "q_26": "Was ist eine überraschende Lektion fürs Leben, die du gelernt hast? [de-DE]",
+    "q_27": "Nach Menschen und Haustieren, was würdest du als erstes retten, wenn (um Himmels Willen!) dein Haus brennt? [de-DE]",
+    "q_28": "Auf welchen Erfolg bist du am meisten stolz? [de-DE]",
+    "q_29": "Was ist deine irrationalste Angst? [de-DE]",
+    "q_30": "Wenn du ein Jahr in einem anderen Land leben müsstest, welches würdest du aussuchen? [de-DE]",
+    "q_31": "Was ist deine kontroverseste Meinung oder Ansicht? [de-DE]",
+    "q_32": "Möchtest du wissen, wie viel Zeit dir noch bleibt zu leben? [de-DE]",
+    "q_33": "Was ist eine „lustige Tatsache“ über dich? [de-DE]",
+    "q_34": "Wenn du eine Klasse unterrichten oder einen TED-Vortrag halten müsstest, was würdest du erzählen? [de-DE]",
+    "q_35": "Welchen Tag in deinem Leben würdest du am liebsten noch einmal erleben? [de-DE]",
+    "q_36": "Was ist eine Sache oder Wohltätigkeitsorganisation, die dir viel bedeutet? [de-DE]",
+    "q_37": "Wie würdest du deinen freien Tag zu verbringen? [de-DE]",
+    "q_38": "Wie würden deine Lieben dich in fünf Worten beschreiben? [de-DE]",
+    "q_39": "Was ist dein wertvollster Besitz? [de-DE]"
+  }
+}

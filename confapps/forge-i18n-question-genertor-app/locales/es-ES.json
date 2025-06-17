@@ -1,0 +1,36 @@
+{
+  "app": {
+    "title": "Aplicación generadora de preguntas - i18n para UI Kit"
+  },
+  "ui": {
+    "header": "Generador de Preguntas",
+    "button": {
+      "nextQuestion": "Siguiente Pregunta"
+    },
+    "text": {
+      "intro": "Puede usar la siguiente pregunta para crear su próxima actividad para romper el hielo.",
+      "currentLocale": "Tu idioma: "
+    }
+  },
+  "question": {
+    "q_0": "¿Cuál es la mejor cosa que has tachado de tu lista de deseos? [es-ES]",
+    "q_1": "Si solo pudieras leer un libro por el resto de tu vida, ¿cuál sería? [es-ES]",
+    "q_9": "¿Cuál es tu deporte menos favorito? [es-ES]",
+    "q_10": "¿Cuál es tu coche de ensueño? [es-ES]",
+    "q_11": "¿Qué ingredientes hay en tu pizza ideal? [es-ES]",
+    "q_12": "¿Qué canción te hace sentir más nostálgico? [es-ES]",
+    "q_13": "¿Cuál es tu canción de karaoke favorita? [es-ES]",
+    "q_14": "¿Qué canción es más probable que te haga bailar? [es-ES]",
+    "q_15": "¿Qué formato tenía el primer álbum que compraste? (Cassette, CD, digital) [es-ES]",
+    "q_16": "¿Qué olor te recuerda más a un lugar o momento específico? [es-ES]",
+    "q_17": "¿Tienes un número de la suerte? ¿Cuál es y por qué? [es-ES]",
+    "q_18": "¿Cuál es tu tipo de cocina favorita? [es-ES]",
+    "q_19": "¿Cuál es tu forma favorita de comer patatas? [es-ES]",
+    "q_20": "Si pudieras tener un suministro ilimitado de una cosa, ¿qué sería? [es-ES]",
+    "q_21": "¿Cuál es tu movimiento de baile característico? [es-ES]",
+    "q_22": "¿Cuál sería tu canción personal o canción de entrada? [es-ES]",
+    "q_23": "¿Cuál es tu chiste de papá favorito? [es-ES]",
+    "q_24": "¿Cuál es tu mejor recuerdo de la infancia? [es-ES]",
+    "q_25": "¿Quién sería el mayor héroe de tu yo de 12 años? [es-ES]"
+  }
+}

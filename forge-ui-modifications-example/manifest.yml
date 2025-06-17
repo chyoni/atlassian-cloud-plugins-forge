@@ -1,0 +1,46 @@
+modules:
+  jira:uiModifications:
+    - key: ui-modifications-app
+      title: Example UI modifications app
+      resource: uiModificationsApp
+  jira:adminPage:
+    - key: ui-modifications-admin-page
+      title: Example UI modifications admin page
+      layout: basic
+      resource: adminPage
+      sections:
+        - header: UI modifications admin page
+          pages:
+            - title: Home
+              route: '/'
+            - title: New UI modification
+              route: '/new-ui-modification'
+            - title: UI modifications contexts and data
+              route: '/ui-modifications'
+            - title: Projects & Issue types
+              route: '/projectissuetypes'
+      resolver:
+        function: resolver
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: uiModificationsApp
+    path: static/ui-modifications/dist
+  - key: adminPage
+    path: static/admin-page/dist
+permissions:
+  scopes:
+    - read:jira-user
+    - read:jira-work
+    - write:jira-work
+    - manage:jira-configuration
+    - read:project:jira
+    - write:field:jira
+    - manage:jira-project
+  content:
+    styles:
+      - 'unsafe-inline'
+app:
+  runtime:
+    name: nodejs18.x

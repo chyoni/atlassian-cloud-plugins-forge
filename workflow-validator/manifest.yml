@@ -1,0 +1,18 @@
+modules:
+  jira:workflowValidator:
+    - key: issue-is-assigned-validator
+      name: Issue is assigned validator
+      description: Validates that the issue has an assignee before transitioning.
+      function: validator
+  function:
+    - key: validator
+      handler: index.run
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/57291900-dad5-4942-b2a7-7b7b248df0bb
+permissions:
+  scopes:
+    - read:jira-work

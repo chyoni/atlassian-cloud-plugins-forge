@@ -1,0 +1,9 @@
+{
+  "app": {
+    "description": "A question generator app built using UI Kit to demonstrate i18n support in Forge [en-GB]"
+  },
+  "question": {
+    "q_0": "What's the most amazing thing you've crossed off your bucket list? [en-GB]",
+    "q_2": "What's your favorite kids' book? [en-GB]"
+  }
+}

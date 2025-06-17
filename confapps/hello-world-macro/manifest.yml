@@ -1,0 +1,27 @@
+modules:
+  macro:
+    - key: hello-world-macro-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: hello-world-macro
+      adfExport: # PDF, Word 등으로 Export 할 때, 이 Macro 영역에 대해 Export 시 커스텀하게 변경할 수 있는
+        function: export-key
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: export-key
+      handler: macroExport.exportFunction
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/0c7ef503-d03b-4ca6-a72a-5857d5a2badb
+permissions:
+  scopes:
+    - read:comment:confluence

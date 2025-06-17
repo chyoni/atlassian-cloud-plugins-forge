@@ -1,0 +1,21 @@
+modules:
+  trigger:
+    - key: product-trigger-seoul-hello-world
+      function: main
+      events:
+        - avi:jira:created:issue
+        - avi:jira:updated:issue
+        - avi:jira:created:issuelink
+        - avi:jira:created:remoteissuelink
+  function:
+    - key: main
+      handler: index.run
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/eb456623-a3d2-481f-acf1-e1980f9f778e
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+    - read:issue.remote-link:jira

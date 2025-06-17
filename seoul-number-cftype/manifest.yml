@@ -1,0 +1,31 @@
+modules:
+  jira:customFieldType:
+    - key: my-integer-custom-field-custom-field-type-ui-kit-2-hello-world
+      name: My Integer Custom Field
+      description: A hello world custom field.
+      type: string
+      # Comment out the following lines
+      # render: native
+      # resource: main
+      # edit:
+      #   resource: edit
+      #   render: native
+      # contextConfig:
+      #   resource: config
+      #   layout: basic
+      #   render: native
+      validation:
+        expression: value == null || !!value.match(configuration?.regex || "^[0-9]+$")
+        errorMessage: The value must consist only of integers
+# Comment out the following lines
+# resources:
+#   - key: main
+#     path: src/frontend/index.jsx
+#   - key: edit
+#     path: src/frontend/edit.jsx
+#   - key: config
+#     path: src/frontend/context-config.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/be2164e0-acfc-470a-a95d-b848b7d500a0

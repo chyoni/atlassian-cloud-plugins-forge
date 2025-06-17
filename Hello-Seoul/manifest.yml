@@ -1,0 +1,26 @@
+modules:
+  jira:issuePanel:
+    - key: hello-seoul-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Hello Seoul
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      displayConditions:
+        issueType: Bug
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/8323b4d7-b015-4201-b76c-d2f5d8177fda
+permissions:
+  scopes: []
+  external:
+    images:
+      - go.atlassian.com

@@ -1,0 +1,64 @@
+modules:
+  jira:adminPage:
+    - key: admin-page
+      resource: main-admin-page
+      title: Admin Page Title
+      render: native
+      resolver:
+        function: resolver
+      pages:
+        - title: Sub1
+          route: '/sub-admin-page-1'
+        - title: Sub2
+          route: '/sub-admin-page-2'
+
+      
+        # sections: // 이렇게 하면 Admin Page Title 하위에 이 섹션 하나 더 만들고 그 섹션에 페이지들이 만들어짐
+        #   - header: Example Section
+        #     pages:
+        #       - title: page example
+        #         route: page-example-1
+
+  jira:issuePanel:
+    - key: hello-world-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Forge app for cwchoiit
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+
+  trigger:
+    - key: issue-created-event
+      function: trigger-created-issue
+      events:
+        - avi:jira:created:issue
+  
+  function:
+    - key: trigger-created-issue
+      handler: index.run
+    - key: resolver
+      handler: index.handler
+
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: main-admin-page
+    path: src/frontend/main-admin-page.jsx
+
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/3d217f6e-94de-48ca-8185-971ffa2aa4e6
+
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+  external:
+    fetch:
+      backend:
+        - zenquotes.io
+        - jsonplaceholder.typicode.com

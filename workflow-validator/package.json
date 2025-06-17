@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@forge/api": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "preregister": "npm run build",
+    "predeploy": "npm run build"
+  }
+}

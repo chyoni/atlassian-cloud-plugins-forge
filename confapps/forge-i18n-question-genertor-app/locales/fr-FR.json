@@ -1,0 +1,39 @@
+{
+  "app": {
+    "title": "Application générateur de questions - i18n pour UI Kit",
+    "description": "Une application de générateur de questions construite avec une UI personnalisée pour démontrer le support i18n dans Forge [fr-FR]"
+  },
+  "ui": {
+    "header": "Générateur de Questions",
+    "button": {
+      "nextQuestion": "Question Suivante"
+    },
+    "text": {
+      "intro": "Vous pouvez utiliser la question suivante pour créer votre prochaine activité de brise-glace.",
+      "currentLocale": "Votre langue: "
+    }
+  },
+  "question": {
+    "q_0": "Quelle est la meilleure chose que vous avez rayée de votre liste de choses à faire ? [fr-FR]",
+    "q_1": "Si vous ne pouviez lire qu'un seul livre pour le reste de votre vie, lequel serait-ce ? [fr-FR]",
+    "q_11": "Quels sont les garnitures de votre pizza idéale ? [fr-FR]",
+    "q_12": "Quelle chanson vous rend le plus nostalgique ? [fr-FR]",
+    "q_13": "Quelle est votre chanson de karaoké préférée ? [fr-FR]",
+    "q_14": "Quelle chanson est la plus susceptible de vous faire danser ? [fr-FR]",
+    "q_15": "Quel format avait le premier album que vous avez acheté ? (Cassette, CD, numérique) [fr-FR]",
+    "q_16": "Quelle odeur vous rappelle le plus un endroit ou un moment spécifique ? [fr-FR]",
+    "q_17": "Avez-vous un chiffre porte-bonheur ? Quel est-il et pourquoi ? [fr-FR]",
+    "q_18": "Quel est votre type de cuisine préféré ? [fr-FR]",
+    "q_19": "Quelle est votre façon préférée de manger des pommes de terre ? [fr-FR]",
+    "q_20": "Si vous pouviez avoir un approvisionnement illimité d'une chose, quelle serait-elle ? [fr-FR]",
+    "q_27": "Après les personnes et les animaux de compagnie, quelle est la première chose que vous sauveriez si (Dieu nous en préserve !) votre maison prenait feu ? [fr-FR]",
+    "q_28": "Quelle est votre plus grande réussite ? [fr-FR]",
+    "q_29": "Quelle est votre peur la plus irrationnelle ? [fr-FR]",
+    "q_30": "Si vous deviez vivre dans un autre pays pendant un an, lequel choisiriez-vous ? [fr-FR]",
+    "q_31": "Quelle est votre opinion la plus controversée ou la plus surprenante ? [fr-FR]",
+    "q_32": "Voudriez-vous savoir combien de temps il vous reste à vivre ? [fr-FR]",
+    "q_33": "Quel est un fait surprenant sur vous ? [fr-FR]",
+    "q_34": "Si vous deviez enseigner une classe ou donner une conférence TED, de quoi s'agirait-il ? [fr-FR]",
+    "q_35": "Quel jour de votre vie aimeriez-vous le plus revivre ? [fr-FR]"
+  }
+}

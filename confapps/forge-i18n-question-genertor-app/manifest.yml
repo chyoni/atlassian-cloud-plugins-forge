@@ -1,0 +1,46 @@
+modules:
+  macro:
+    - key: forge-i18n-question-genertor-app-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title:
+        i18n: app.title
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/3c17ffa0-cb12-4dec-81a5-9e20bc07b383
+translations:
+  fallback:
+    default: en-US
+    zh-TW:
+      - zh-CN
+    de-DE:
+      - en-GB
+    es-ES:
+      - en-GB
+  resources:
+    - key: en-US
+      path: locales/en-US.json
+    - key: en-GB
+      path: locales/en-GB.json
+    - key: zh-CN
+      path: locales/zh-CN.json
+    - key: zh-TW
+      path: locales/zh-TW.json
+    - key: fr-FR
+      path: locales/fr-FR.json
+    - key: de-DE
+      path: locales/de-DE.json
+    - key: es-ES
+      path: locales/es-ES.json
+
