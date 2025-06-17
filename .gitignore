@@ -5,6 +5,12 @@
 *.ipr
 
 node_modules/
+.env
+.env.local
+dist/
+build/
+.DS_Store
+.idea
 
 # gradle project minimum
 !.idea/gradle.xml
