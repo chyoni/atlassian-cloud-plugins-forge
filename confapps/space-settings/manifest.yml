@@ -1,0 +1,33 @@
+modules:
+  confluence:spaceSettings:
+    - key: forge-space-news
+      resource: settings
+      render: native
+      resolver:
+        function: resolver
+      title: Space news
+      route: hello-world
+  confluence:contentBylineItem:
+    - key: forge-space-news-byline
+      resource: byline
+      render: native
+      title: Space news
+      tooltip: Displays recent space news
+  function:
+    - key: resolver
+      handler: index.handler
+permissions:
+  scopes:
+    - 'read:space:confluence'
+    - 'write:space:confluence'
+resources:
+  - key: settings
+    path: src/frontend/index.jsx
+  - key: byline
+    path: src/frontend/byline.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/8459e19c-4195-42f0-bd56-da85eaa8b6d7
