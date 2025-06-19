@@ -1,0 +1,22 @@
+modules:
+  macro:
+    - key: add-configuration-macro-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: add-configuration-macro
+      config:
+        openOnInsert: true
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/93c0edd7-842f-46d7-aaea-fba73f410f6e
