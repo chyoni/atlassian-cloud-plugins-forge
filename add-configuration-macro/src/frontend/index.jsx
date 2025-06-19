@@ -6,13 +6,20 @@ const defaultConfig = {
     age: "0"
 }
 
+
 const Config = () => {
     return (
         <>
             <Label labelFor={"pet-name"}>Pet name</Label>
-            <Textfield id={"pet-name"} name="name" defaultValue={defaultConfig.name}/>
+            <Textfield id={"pet-name"}
+                       name={"name"}
+                       value={name}
+                       defaultValue={defaultConfig.name}/>
+
             <Label labelFor={"pet-age"}>Pet age</Label>
-            <Textfield id={"pet-age"} name="age" defaultValue={defaultConfig.age}/>
+            <Textfield id={"pet-age"}
+                       name={"age"}
+                       defaultValue={defaultConfig.age}/>
         </>
     );
 };
@@ -27,10 +34,12 @@ const App = () => {
             <Text>
                 {config.name} is {config.age} years old.
             </Text>
-            <SectionMessage title={"You need to configure this macro"} appearance={"warning"}>
-                <Text> While editing the page, select the macro, and click on the pencil icon
-                    to display configuration options.</Text>
-            </SectionMessage>
+            {!actualConfig &&
+                <SectionMessage title={"You need to configure this macro"} appearance={"warning"}>
+                    <Text> While editing the page, select the macro, and click on the pencil icon
+                        to display configuration options.</Text>
+                </SectionMessage>
+            }
         </>
     )
 };
