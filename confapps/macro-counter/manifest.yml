@@ -1,0 +1,24 @@
+modules:
+  confluence:contentAction:
+    - key: macro-counter
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Macro count
+  function:
+    - key: resolver
+      handler: index.handler
+permissions:
+  scopes:
+    - 'read:confluence-content.summary'
+    - 'read:page:confluence'
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/fb938932-09ed-4eb7-89df-ecc0592f63c1
