@@ -1,0 +1,25 @@
+modules:
+  confluence:globalPage:
+    - key: board
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Board
+      route: cwchoiit-board
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/43b801e7-eb8c-435e-990c-1fb6b6216101
+permissions:
+  scopes:
+    - read:confluence-user
+    - storage:app
