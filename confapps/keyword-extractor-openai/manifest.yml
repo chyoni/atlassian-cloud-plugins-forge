@@ -1,0 +1,29 @@
+modules:
+  confluence:contentAction:
+    - key: keyword-extractor-openai
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: keyword-extractor-openai
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/1a61952b-7191-416e-bab1-98ad44d6cd5f
+permissions:
+  scopes:
+    - read:confluence-content.summary
+    - read:page:confluence
+    - write:confluence-content
+  external:
+    fetch:
+      backend:
+        - https://api.openai.com

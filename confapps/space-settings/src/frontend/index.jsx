@@ -17,7 +17,7 @@ const App = () => {
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
             <TextArea {...register("news")} />
-            <Button type="submit">Submit</Button>
+            <Button appearance={"primary"} type="submit">Submit</Button>
         </Form>
     );
 };
