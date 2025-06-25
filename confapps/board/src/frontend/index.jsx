@@ -198,7 +198,7 @@ const App = () => {
 
             <ModalTransition>
                 {isReadOpenModal && (
-                    <Modal onClose={closeReadModal} height={"500px"} width={"500px"}>
+                    <Modal onClose={closeReadModal} height={"500px"} shouldScrollInViewport={false} width={"x-large"}>
                         <ModalHeader>
                             <ModalTitle>{'게시글 상세'}</ModalTitle>
                         </ModalHeader>
