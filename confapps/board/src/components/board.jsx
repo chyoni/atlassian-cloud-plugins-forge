@@ -22,12 +22,12 @@ const head = {
         {
             key: "action",
             content: "Action",
-            isSortable: true,
+            isSortable: false,
         },
     ],
 };
 
-export const Board = ({articles, loading, onDeleteArticle}) => {
+export const Board = ({articles, loading, onDeleteArticle, openEditModal, openReadModal}) => {
 
     const rows = articles.map((article, index) => ({
         key: `article:${article.id}:${index}`,
@@ -38,7 +38,8 @@ export const Board = ({articles, loading, onDeleteArticle}) => {
             },
             {
                 key: `content:${index}`,
-                content: article.content,
+                content: article.content.length > 30 ? `${article.content.substring(0, 30)}...` : article.content,
+                colspan: 1,
             },
             {
                 key: `author:${index}`,
@@ -48,7 +49,8 @@ export const Board = ({articles, loading, onDeleteArticle}) => {
                 key: `action:${index}`,
                 content: (
                     <Inline space={"space.075"}>
-                        <Button appearance={"default"} onClick={() => {}}>수정</Button>
+                        <Button appearance={"subtle"} onClick={() => openReadModal(article)}>상세</Button>
+                        <Button appearance={"default"} onClick={() => openEditModal(article)}>수정</Button>
                         <Button appearance={"danger"} onClick={() => onDeleteArticle(article)}>삭제</Button>
                     </Inline>
                 )
@@ -62,6 +64,8 @@ export const Board = ({articles, loading, onDeleteArticle}) => {
                 head={head}
                 rows={rows}
                 emptyView={"No articles yet."}
+                isRankable={true}
+                isFixedSize={true}
                 isLoading={loading}/>
         </>
     );
