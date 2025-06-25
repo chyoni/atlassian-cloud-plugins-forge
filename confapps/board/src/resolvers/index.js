@@ -27,8 +27,6 @@ resolver.define('findAllArticles', async (req) => {
         .limit(100)
         .getMany();
 
-    console.log(keys);
-
     return await Promise.all(
         keys.results.map(async (key) => {
             return await kvs.get(key.key);
