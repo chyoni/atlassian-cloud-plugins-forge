@@ -27,10 +27,9 @@ resolver.define('findAllArticles', async (req) => {
         .limit(100)
         .getMany();
 
-    return await Promise.all(
-        keys.results.map(async (key) => {
-            return await kvs.get(key.key);
-        }));
+    return await Promise.all(keys.results.map(async (key) => {
+        return await kvs.get(key.key);
+    }));
 })
 
 resolver.define('saveArticle', async (req) => {

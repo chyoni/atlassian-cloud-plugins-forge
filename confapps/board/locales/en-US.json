@@ -13,7 +13,9 @@
   },
   "field": {
     "title": "Title",
-    "content": "Content"
+    "content": "Content",
+    "author": "Author",
+    "action": "Action"
   },
   "button": {
     "cancel": "Cancel",

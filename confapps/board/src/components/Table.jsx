@@ -1,34 +1,34 @@
 import React from 'react';
 import {Button, DynamicTable, Inline, User, useTranslation} from "@forge/react";
 
-const head = {
-    cells: [
-        {
-            key: "title",
-            content: "Title",
-            isSortable: true,
-        },
-        {
-            key: "content",
-            content: "Content",
-            shouldTruncate: true,
-            isSortable: true,
-        },
-        {
-            key: "author",
-            content: "Author",
-            isSortable: true,
-        },
-        {
-            key: "action",
-            content: "Action",
-            isSortable: false,
-        },
-    ],
-};
-
 export const Table = ({articles, loading, onDeleteArticle, openEditModal, openReadModal}) => {
     const {t} = useTranslation();
+
+    const head = {
+        cells: [
+            {
+                key: "title",
+                content: t(`field.title`),
+                isSortable: true,
+            },
+            {
+                key: "content",
+                content: t(`field.content`),
+                shouldTruncate: true,
+                isSortable: true,
+            },
+            {
+                key: "author",
+                content: t(`field.author`),
+                isSortable: true,
+            },
+            {
+                key: "action",
+                content: t(`field.action`),
+                isSortable: false,
+            },
+        ],
+    };
 
     const rows = articles.map((article, index) => ({
         key: `article:${article.id}:${index}`,
@@ -68,6 +68,7 @@ export const Table = ({articles, loading, onDeleteArticle, openEditModal, openRe
                 head={head}
                 rows={rows}
                 emptyView={t(`article.empty.suggestions`)}
+                rowsPerPage={5}
                 isRankable={true}
                 isFixedSize={true}
                 isLoading={loading}/>
