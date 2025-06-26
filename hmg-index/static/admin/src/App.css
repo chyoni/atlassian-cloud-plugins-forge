@@ -1,0 +1,477 @@
+.admin-app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.admin-header {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.admin-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+
+.admin-header p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.admin-content {
+  padding: 40px 30px;
+}
+
+.message-box {
+  background: #e0f2fe;
+  border: 1px solid #81d4fa;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 30px;
+  color: #0277bd;
+  font-weight: 500;
+}
+
+/* Admin Tabs */
+.admin-tabs {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tab-button:hover {
+  color: #4f46e5;
+  background-color: #f8fafc;
+}
+
+.tab-button.active {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+  background-color: #f8fafc;
+}
+
+.tab-content {
+  min-height: 400px;
+}
+
+.settings-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.settings-section:last-of-type {
+  border-bottom: none;
+}
+
+.settings-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.setting-item {
+  margin-bottom: 25px;
+}
+
+.setting-item label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.setting-item input[type="text"],
+.setting-item input[type="number"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.setting-item input[type="text"]:focus,
+.setting-item input[type="number"]:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.setting-item small {
+  display: block;
+  margin-top: 5px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 500 !important;
+  margin-bottom: 0 !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 15px;
+  margin: 40px 0 0 0;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.save-btn,
+.reset-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save-btn {
+  background: #059669;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.reset-btn {
+  background: #6b7280;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+/* Organization Data Management */
+.organization-data-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.organization-data-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 10px 0;
+}
+
+.organization-data-section p {
+  color: #6b7280;
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+}
+
+.data-actions {
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.organization-admin-table {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.org-admin-header {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 120px;
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.org-admin-header > div {
+  padding: 12px 16px;
+  border-right: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.org-admin-header > div:last-child {
+  border-right: none;
+}
+
+.org-admin-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 120px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+  min-height: 50px;
+}
+
+.org-admin-row:hover {
+  background-color: #f8fafc;
+}
+
+.org-admin-row:last-child {
+  border-bottom: none;
+}
+
+.org-admin-row > div {
+  padding: 12px 16px;
+  border-right: 1px solid #f3f4f6;
+  font-size: 0.9rem;
+  align-items: center;
+  display: flex;
+  word-break: break-word;
+}
+
+.org-admin-row > div:last-child {
+  border-right: none;
+}
+
+.org-edit-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 120px;
+  border-bottom: 1px solid #f3f4f6;
+  background-color: #f8fafc;
+  padding: 8px 0;
+}
+
+.org-edit-row input {
+  margin: 4px 8px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: calc(100% - 16px);
+  box-sizing: border-box;
+}
+
+.org-edit-row input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btn,
+.delete-btn,
+.save-edit-btn,
+.cancel-edit-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.save-edit-btn {
+  background: #10b981;
+  color: white;
+}
+
+.save-edit-btn:hover {
+  background: #059669;
+}
+
+.cancel-edit-btn {
+  background: #6b7280;
+  color: white;
+}
+
+.cancel-edit-btn:hover {
+  background: #4b5563;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-app {
+    padding: 10px;
+  }
+  
+  .admin-header {
+    padding: 30px 20px;
+  }
+  
+  .admin-header h1 {
+    font-size: 2rem;
+  }
+  
+  .admin-content {
+    padding: 30px 20px;
+  }
+  
+  .tab-list {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    border-bottom: none;
+    border-right: 3px solid transparent;
+    text-align: left;
+  }
+  
+  .tab-button.active {
+    border-bottom: none;
+    border-right-color: #4f46e5;
+  }
+  
+  .admin-actions {
+    flex-direction: column;
+  }
+  
+  .save-btn,
+  .reset-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .org-admin-header,
+  .org-admin-row,
+  .org-edit-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .org-admin-header > div,
+  .org-admin-row > div {
+    border-right: none;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 8px 16px;
+  }
+  
+  .org-admin-header > div:last-child,
+  .org-admin-row > div:last-child {
+    border-bottom: none;
+  }
+  
+  .org-edit-row {
+    display: block;
+    padding: 16px;
+  }
+  
+  .org-edit-row input {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
