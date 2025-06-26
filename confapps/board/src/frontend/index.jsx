@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import ForgeReconciler, {
     Button,
     Form,
@@ -17,10 +17,12 @@ import ForgeReconciler, {
     Textfield,
     useForm
 } from '@forge/react';
-import {Board} from "../components/board";
+import {Board} from "../components/Board";
 import {invoke} from "@forge/bridge";
 
 const App = () => {
+    const [currentUser, setCurrentUser] = useState(null);
+
     const createForm = useForm();
     const editForm = useForm();
 
@@ -36,19 +38,20 @@ const App = () => {
     const openNewModal = () => setIsNewOpenModal(true);
     const closeNewModal = () => setIsNewOpenModal(false);
 
-    const openEditModal = (article) => {
+    const openEditModal = useCallback((article) => {
         setCurrentArticle(article);
         setIsEditOpenModal(true);
-    }
+    }, []);
+
     const closeEditModal = () => {
         setIsEditOpenModal(false);
         setCurrentArticle(null);
     }
 
-    const openReadModal = (article) => {
+    const openReadModal = useCallback((article) => {
         setReadArticle(article);
         setIsReadOpenModal(true);
-    }
+    }, []);
 
     const closeReadModal = () => {
         setIsReadOpenModal(false);
@@ -66,13 +69,22 @@ const App = () => {
         retrieveArticles().catch(console.error);
     }, [invoke, setArticles, setFetchLoading]);
 
+    useEffect(() => {
+        const fetchCurrentUser = async () => {
+            if (!currentUser) {
+                const user = await invoke('findCurrentUser');
+                setCurrentUser(user);
+            }
+        };
+        fetchCurrentUser().catch(console.error);
+    }, [currentUser]);
+
+
     const onCreateArticleSubmit = async (data) => {
         setWriteLoading(true);
 
-        const currentUser = await invoke('findCurrentUser');
-
         const newArticle = await invoke('saveArticle', {
-            id: Date.now(),
+            id: `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`,
             title: data.title,
             content: data.content,
             accountId: currentUser.accountId,
@@ -87,7 +99,6 @@ const App = () => {
     const onEditArticleSubmit = async (data) => {
         setWriteLoading(true);
 
-        const currentUser = await invoke('findCurrentUser');
         const updatedArticle = await invoke('saveArticle', {
             id: currentArticle.id,
             title: data.title === undefined ? currentArticle.title : data.title,
@@ -95,15 +106,17 @@ const App = () => {
             accountId: currentUser.accountId,
         });
 
-        setArticles(articles.map(a => a.id === updatedArticle.id ? updatedArticle : a));
+        setArticles(prevArticles =>
+            prevArticles.map(a => a.id === updatedArticle.id ? updatedArticle : a)
+        );
         setWriteLoading(false);
         closeEditModal();
     }
 
-    const onDeleteArticle = async (article) => {
+    const onDeleteArticle = useCallback(async (article) => {
         await invoke('deleteArticle', {article});
-        setArticles(articles.filter(a => a.id !== article.id));
-    }
+        setArticles(prevArticles => prevArticles.filter(a => a.id !== article.id));
+    }, []);
 
     return (
         <>
