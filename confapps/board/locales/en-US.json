@@ -1,0 +1,26 @@
+{
+  "board": {
+    "title": "Board"
+  },
+  "article": {
+    "create": "Create Article",
+    "edit": "Edit Article",
+    "detail": "Article Details",
+    "empty": {
+      "desc": "No Article yet.",
+      "suggestions": "Let's get post new Article!"
+    }
+  },
+  "field": {
+    "title": "Title",
+    "content": "Content"
+  },
+  "button": {
+    "cancel": "Cancel",
+    "create": "Create",
+    "edit": "Edit",
+    "close": "Close",
+    "detail": "Detail",
+    "delete": "Delete"
+  }
+}

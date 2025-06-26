@@ -23,3 +23,12 @@ permissions:
   scopes:
     - read:confluence-user
     - storage:app
+
+translations:
+  fallback:
+    default: en-US
+  resources:
+    - key: en-US
+      path: locales/en-US.json
+    - key: ko-KR
+      path: locales/ko-KR.json

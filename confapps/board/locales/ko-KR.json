@@ -1,0 +1,26 @@
+{
+  "board": {
+    "title": "게시판"
+  },
+  "article": {
+    "create": "게시글 생성",
+    "edit": "게시글 수정",
+    "detail": "게시글 상세",
+    "empty": {
+      "desc": "아직 게시글이 없습니다.",
+      "suggestions": "새로운 게시글을 작성해보세요!"
+    }
+  },
+  "field": {
+    "title": "제목",
+    "content": "내용"
+  },
+  "button": {
+    "cancel": "취소",
+    "create": "생성",
+    "edit": "수정",
+    "close": "닫기",
+    "detail": "상세",
+    "delete": "삭제"
+  }
+}

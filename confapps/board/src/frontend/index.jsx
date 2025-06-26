@@ -3,6 +3,7 @@ import ForgeReconciler, {
     Button,
     Form,
     Heading,
+    I18nProvider,
     Inline,
     Label,
     LoadingButton,
@@ -15,12 +16,15 @@ import ForgeReconciler, {
     Stack,
     TextArea,
     Textfield,
-    useForm
+    useForm,
+    useTranslation
 } from '@forge/react';
-import {Board} from "../components/Board";
+import {Table} from "../components/Table";
 import {invoke} from "@forge/bridge";
 
 const App = () => {
+    const {t} = useTranslation();
+
     const [currentUser, setCurrentUser] = useState(null);
 
     const createForm = useForm();
@@ -122,12 +126,12 @@ const App = () => {
         <>
             <Stack space={"space.1000"}>
                 <Stack alignInline={"center"}>
-                    <Heading size={"large"}>게시판</Heading>
+                    <Heading size={"large"}>{t("board.title")}</Heading>
                 </Stack>
                 <Inline alignInline={"end"}>
-                    <Button appearance={"primary"} onClick={openNewModal}>게시글 생성</Button>
+                    <Button appearance={"primary"} onClick={openNewModal}>{t(`article.create`)}</Button>
                 </Inline>
-                <Board articles={articles}
+                <Table articles={articles}
                        loading={fetchLoading}
                        onDeleteArticle={onDeleteArticle}
                        openEditModal={openEditModal}
@@ -140,15 +144,15 @@ const App = () => {
                     <Modal onClose={closeNewModal}>
                         <Form onSubmit={createForm.handleSubmit(onCreateArticleSubmit)}>
                             <ModalHeader>
-                                <ModalTitle>{'게시글 생성'}</ModalTitle>
+                                <ModalTitle>{t(`article.create`)}</ModalTitle>
                             </ModalHeader>
                             <ModalBody>
-                                <Label labelFor={createForm.getFieldId('title')}>제목</Label>
+                                <Label labelFor={createForm.getFieldId('title')}>{t(`field.title`)}</Label>
                                 <Textfield name={"title"}
                                            id={"title"}
                                            {...createForm.register('title', {required: true})} />
 
-                                <Label labelFor={createForm.getFieldId('content')}>내용</Label>
+                                <Label labelFor={createForm.getFieldId('content')}>{t(`field.content`)}</Label>
                                 <TextArea name={"content"}
                                           id={"content"}
                                           {...createForm.register('content', {required: true})} />
@@ -157,13 +161,13 @@ const App = () => {
                                 <LoadingButton isDisabled={writeLoading}
                                                appearance={"subtle"}
                                                onClick={closeNewModal}>
-                                    취소
+                                    {t(`button.cancel`)}
                                 </LoadingButton>
                                 <LoadingButton isDisabled={writeLoading}
                                                isLoading={writeLoading}
                                                appearance={"primary"}
                                                type={"submit"}>
-                                    생성
+                                    {t(`button.create`)}
                                 </LoadingButton>
                             </ModalFooter>
                         </Form>
@@ -176,16 +180,16 @@ const App = () => {
                     <Modal onClose={closeEditModal}>
                         <Form onSubmit={editForm.handleSubmit(onEditArticleSubmit)}>
                             <ModalHeader>
-                                <ModalTitle>{'게시글 수정'}</ModalTitle>
+                                <ModalTitle>{t(`article.edit`)}</ModalTitle>
                             </ModalHeader>
                             <ModalBody>
-                                <Label labelFor={editForm.getFieldId('title')}>제목</Label>
+                                <Label labelFor={editForm.getFieldId('title')}>{t(`field.title`)}</Label>
                                 <Textfield name={"title"}
                                            id={"title"}
                                            defaultValue={currentArticle.title}
                                            {...editForm.register('title')} />
 
-                                <Label labelFor={editForm.getFieldId('content')}>내용</Label>
+                                <Label labelFor={editForm.getFieldId('content')}>{t(`field.content`)}</Label>
                                 <TextArea name={"content"}
                                           id={"content"}
                                           defaultValue={currentArticle.content}
@@ -195,13 +199,13 @@ const App = () => {
                                 <LoadingButton isDisabled={writeLoading}
                                                appearance={"subtle"}
                                                onClick={closeEditModal}>
-                                    취소
+                                    {t(`button.cancel`)}
                                 </LoadingButton>
                                 <LoadingButton isDisabled={writeLoading}
                                                appearance={"primary"}
                                                type={"submit"}
                                                isLoading={writeLoading}>
-                                    수정
+                                    {t(`button.edit`)}
                                 </LoadingButton>
                             </ModalFooter>
                         </Form>
@@ -213,17 +217,17 @@ const App = () => {
                 {isReadOpenModal && (
                     <Modal onClose={closeReadModal} height={"500px"} shouldScrollInViewport={false} width={"x-large"}>
                         <ModalHeader>
-                            <ModalTitle>{'게시글 상세'}</ModalTitle>
+                            <ModalTitle>{t(`article.detail`)}</ModalTitle>
                         </ModalHeader>
                         <ModalBody>
-                            <Label labelFor={"title"}>제목</Label>
+                            <Label labelFor={"title"}>{t(`field.title`)}</Label>
                             <Textfield name={"title"}
                                        id={"title"}
                                        defaultValue={readArticle.title}
                                        isReadOnly={true}
                                        isDisabled={true}/>
 
-                            <Label labelFor={"content"}>내용</Label>
+                            <Label labelFor={"content"}>{t(`article.content`)}</Label>
                             <TextArea name={"content"}
                                       id={"content"}
                                       isReadOnly={true}
@@ -232,7 +236,7 @@ const App = () => {
                         </ModalBody>
                         <ModalFooter>
                             <LoadingButton appearance={"subtle"} onClick={closeReadModal}>
-                                닫기
+                                {t(`button.close`)}
                             </LoadingButton>
                         </ModalFooter>
                     </Modal>
@@ -244,6 +248,8 @@ const App = () => {
 
 ForgeReconciler.render(
     <React.StrictMode>
-        <App/>
+        <I18nProvider>
+            <App/>
+        </I18nProvider>
     </React.StrictMode>
 );
