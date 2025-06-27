@@ -22,14 +22,12 @@ resolver.define('findCurrentUser', async (req) => {
 });
 
 resolver.define('findAllArticles', async (req) => {
-    const keys = await kvs.query()
+    const result = await kvs.query()
         .where('key', WhereConditions.beginsWith('article:'))
         .limit(100)
         .getMany();
 
-    return await Promise.all(keys.results.map(async (key) => {
-        return await kvs.get(key.key);
-    }));
+    return result.results.map(r => r.value);
 })
 
 resolver.define('saveArticle', async (req) => {
