@@ -227,7 +227,7 @@ const App = () => {
                                        isReadOnly={true}
                                        isDisabled={true}/>
 
-                            <Label labelFor={"content"}>{t(`article.content`)}</Label>
+                            <Label labelFor={"content"}>{t(`field.content`)}</Label>
                             <TextArea name={"content"}
                                       id={"content"}
                                       isReadOnly={true}
