@@ -3,6 +3,7 @@ modules:
     - key: add-configuration-macro-hello-world-macro
       resource: main
       render: native
+      viewportSize: max
       resolver:
         function: resolver
       title: add-configuration-macro
