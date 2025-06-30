@@ -1,4 +1,4 @@
-import {Label, Textfield} from "@forge/react";
+import ForgeReconciler, {Label, Textfield} from "@forge/react";
 import React from "react";
 
 export const defaultConfig = {
@@ -22,4 +22,4 @@ const Config = () => {
     );
 };
 
-export default Config;
+ForgeReconciler.addConfig(<Config/>);

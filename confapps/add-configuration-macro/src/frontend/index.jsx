@@ -1,6 +1,6 @@
 import React from 'react';
 import ForgeReconciler, {Link, SectionMessage, Stack, Text, useConfig} from '@forge/react';
-import Config, {defaultConfig} from "../config";
+import {defaultConfig} from "../config";
 
 
 const App = () => {
@@ -35,5 +35,3 @@ ForgeReconciler.render(
         <App/>
     </React.StrictMode>
 );
-
-ForgeReconciler.addConfig(<Config/>);
