@@ -1,0 +1,20 @@
+modules:
+  trigger:
+    - key: alert-highest-issue-unassigned-consumer
+      function: trigger
+      events:
+        - avi:cloud:ecosystem::event/c0475f24-2b2e-4979-ab9b-4d3eccbaa036/alert-highest-issue-unassigned
+  function:
+    - key: trigger
+      handler: index.run
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/e62bf1ee-2cea-4c4a-9def-6613f96c0642
+permissions:
+  scopes:
+    - read:jira-work
+  external:
+    fetch:
+      backend:
+        - 'https://slack.com'
